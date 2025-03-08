@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CryptoVersus: Launch or relaunch your online presence, capture leads, and boost your business.">
+    <meta property="og:title" content="CryptoVersus">
+    <meta property="og:description" content="Launch or relaunch your online presence, capture leads, and boost your business.">
+    <meta property="og:image" content="./public/images/logo.jpeg">
+    <title>CryptoVersus</title>
+    <link rel="stylesheet" href="./public/main.css">
+    <link rel="icon" href="./public/images/cv2.jpeg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Component -->
+    <header id="headerFixed" data-component="HeaderComponent">
+        <nav id="navFlex">
+            <div id="navToggle" data-element="NavToggle">
+                <span></span><span></span><span></span>
+            </div>
+            <div id="logo" data-element="Logo">
+                <a href="#home">
+                    <img src="https://global-files-nginx.builderall.com/2b6c8c37-e28d-4058-897a-464fad7bc3ba/16cd1649584ccdca549a7d6d5667bd5b43b3a1d35c138d0c30b0d4fa66a43388.png" alt="CryptoVersus Logo">
+                </a>
+            </div>
+            <ul id="navMenu" data-element="NavMenu">
+                <li><a href="#about" data-nav-item>Services</a></li>
+                <li><a href="#portfolio" data-nav-item>Portfolio</a></li>
+                <li><a href="#contact" data-nav-item>Contact</a></li>
+            </ul>
+            <div id="socialMediaIcons" data-element="SocialIcons">
+                <a href="https://x.com/CryptoVersusIO" target="_blank">
+                    <img src="https://global-files-nginx.builderall.com/2b6c8c37-e28d-4058-897a-464fad7bc3ba/da890403e07b6ce652ac941708e38fe1f91ef57c54d188fc202843299cfe03e8.png" alt="Twitter X Logo">
+                </a>
+                <a href="https://www.linkedin.com/company/cryptoversus-io/about/" target="_blank">
+                    <img src="https://global-files-nginx.builderall.com/2b6c8c37-e28d-4058-897a-464fad7bc3ba/6701144531f0630492c88a00231dd8e8bcd59e8373c8dbafffd3d64370f3f513.png" alt="LinkedIn Logo">
+                </a>
+            </div>
+            <div id="searchPill" data-element="SearchBar">
+                <input type="text" placeholder="Search..." aria-label="Search">
+                <div id="searchResults"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Component -->
+        <section id="home" data-component="HeroComponent">
+            <h3>Launch or <span data-highlight>RELAUNCH</span> Your Online Presence, Capture Leads, and Boost Your Business</h3>
+            <h1>GET YOUR MARKETING BUNDLE TODAY!</h1>
+            
+        </section>
+
+        <!-- Services Component -->
+        <section id="about" data-component="ServicesComponent">
+            <h2>Our Services</h2>
+            <p>We provide comprehensive solutions to enhance your online presence.</p>
+        </section>
+
+        <!-- Portfolio Component -->
+        <section id="portfolio" data-component="PortfolioComponent">
+            <h2>Portfolio</h2>
+            <p>Explore our successful projects and case studies.</p>
+            <div id="carousel" data-element="Carousel">
+                <div data-carousel-slide>
+                    <div data-carousel-item>
+                        <a href="https://www.momareedoula.com" target="_blank">
+                            <img src="./images/portfolio-1.svg" alt="Momaree Doula - Website Design">
+                        </a>
+                    </div>
+                    <div data-carousel-item>
+                        <a href="https://www.f2t.io" target="_blank">
+                            <img src="./images/portfolio-2.svg" alt="Field 2 Table - Website Design">
+                        </a>
+                    </div>
+                    <div data-carousel-item>
+                        <a href="https://www.ravensong.com/" target="_blank">
+                            <img src="./images/portfolio-3.svg" alt="Ravensong - Website Design">
+                        </a>
+                    </div>
+                    <div data-carousel-item>
+                        <a href="https://www.velar.us" target="_blank">
+                            <img src="./images/portfolio-4.svg" alt="Velar - Website Design">
+                        </a>
+                    </div>
+                    <div data-carousel-item>
+                        <a href="https://www.kravitzdentistry.com" target="_blank">
+                            <img src="./images/portfolio-5.png" alt="Kravitz Dentistry - Website Design">
+                        </a>
+                    </div>
+                    <div data-carousel-item>
+                        <a href="https://dentalimplants.us" target="_blank">
+                            <img src="./images/portfolio-6.png" alt="3 Minute Implant (TM) - Website Design">
+                        </a>
+                    </div>
+                </div>
+                <button id="carouselPrev" data-carousel-button="prev" aria-label="Previous slide">&#10094;</button>
+                <button id="carouselNext" data-carousel-button="next" aria-label="Next slide">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Contact Component -->
+        <section id="contact" data-component="ContactComponent">
+            <h2>Contact Us</h2>
+            <div data-hero-content>
+                <h2 data-hero-tagline>"Let's Discuss Your Digital Journey and Start Building!"</h2>
+            </div>
+            <form id="contactForm" data-element="ContactForm">
+                <p>Enter your details, and we'll get in touch soon.</p>
+                <div data-form-group>
+                    <label for="EMAIL">E-mail</label>
+                    <input data-form-control required placeholder="E-mail" name="EMAIL" type="email" id="EMAIL">
+                </div>
+                <div data-form-group>
+                    <label for="FNAME">Name</label>
+                    <input data-form-control placeholder="Name" name="FNAME" type="text" id="FNAME">
+                </div>
+                <div data-form-group>
+                    <label for="message">Message</label>
+                    <textarea data-form-control placeholder="Your message" name="message" id="message" rows="4"></textarea>
+                </div>
+                <input type="submit" data-cta-button value="Let's Build Something Amazing">
+                <p data-privacy-note>
+                    <span data-lock-icon>🔒</span> Your information is private and it will reach only the directors of ACMEWERX, INC.
+                </p>
+            </form>
+            <p id="formStatus" data-element="FormStatus"></p>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer id="footerFixed" data-component="FooterComponent">
+        <div data-footer-content>
+            CryptoVersusIO is a division of <a href="https://acmewerx.com" target="_blank">ACMEWERX</a> &copy; 2016-2025<br>
+            <a href="./privacy.html" target="_blank">Terms of Service</a>
+        </div>
+    </footer>
+
+    <!-- FlexNet JSX Script -->
+    <script src="./public/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof initApp === 'function') {
+                initApp();
+            } else {
+                console.error('Application initialization function not found');
+            }
+        });
+    </script>
+</body>
+</html>

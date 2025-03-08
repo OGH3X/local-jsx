@@ -1,0 +1,477 @@
+/* FlexNet JSX Styling - CryptoVersus Theme */
+
+/* CSS Variable Definition */
+:root {
+    /* Color System */
+    --color-stormy: #494E6B;
+    --color-cloud: #98878F;
+    --color-sunset: #985E6D;
+    --color-evening: #192231;
+    --color-secondary: #eeb64f;
+    --color-neon-blue: #00FFFF;
+    --color-electric-purple: #BF00FF;
+    --color-cyber-green: #00FF00;
+    --color-dark-slate: #2F4F4F;
+    --color-bright-orange: #FFA500;
+    --color-dark-bg: #000000;
+    --color-accent-purple: #9945FF;
+    --color-teal: #14F195;
+    --color-white-text: #FFFFFF;
+
+    /* Typography */
+    --font-family-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.2rem;
+    --font-size-xl: 1.4rem;
+    --font-size-xxl: 1.7rem;
+    --font-size-header: 2.5rem;
+    --font-size-title: 2.7rem;
+    
+    /* Spacing System */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-xxl: 3rem;
+    
+    /* Layout System */
+    --header-height: 4rem;
+    --footer-height: 4rem;
+    --section-spacing: 2.5rem;
+    --container-width-lg: 50rem;
+    --border-radius-sm: 0.25rem;
+    --border-radius-md: 0.5rem;
+    --border-radius-pill: 1.5rem;
+    
+    /* Animation */
+    --transition-fast: 0.3s ease;
+    --transition-medium: 0.5s ease;
+}
+
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding-top: var(--header-height);
+    padding-bottom: var(--footer-height);
+    min-height: 100vh;
+    background-color: var(--color-dark-bg);
+    color: var(--color-white-text);
+    font-family: var(--font-family-primary);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Typography */
+h1 { 
+    font-size: var(--font-size-title); 
+    margin: var(--spacing-md) 0; 
+}
+
+h2 { 
+    margin: 0 0 var(--spacing-md) 0;
+    padding: var(--spacing-md) 0;
+    font-size: var(--font-size-header);
+}
+
+h3 { 
+    font-size: var(--font-size-xxl); 
+    margin: var(--spacing-md) 0; 
+}
+
+p { 
+    font-size: var(--font-size-xl); 
+    margin: var(--spacing-md) 0; 
+}
+
+[data-highlight] {
+    color: var(--color-accent-purple);
+    font-weight: bold;
+}
+
+/* Header Styles */
+#headerFixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--color-dark-bg);
+    padding: var(--spacing-md) var(--spacing-xl);
+}
+
+#navFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#navToggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1.875rem;
+    height: 1.375rem;
+    cursor: pointer;
+}
+
+#navToggle span {
+    display: block;
+    width: 100%;
+    height: 0.1875rem;
+    background-color: var(--color-white-text);
+}
+
+#logo img {
+    height: 5rem;
+    padding: var(--spacing-sm);
+}
+
+#navMenu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+#navMenu li {
+    margin: 0 var(--spacing-md);
+}
+
+#navMenu a {
+    color: var(--color-white-text);
+    text-decoration: none;
+    font-size: var(--font-size-lg);
+    transition: color var(--transition-fast), text-shadow var(--transition-fast);
+}
+
+#navMenu a:hover {
+    color: var(--color-electric-purple);
+    text-shadow: 0 0 0.625rem var(--color-electric-purple);
+}
+
+#navMenu a[data-active] {
+    color: var(--color-electric-purple);
+    text-shadow: 0 0 0.625rem var(--color-electric-purple);
+}
+
+#socialMediaIcons {
+    display: flex;
+    align-items: center;
+}
+
+#socialMediaIcons img {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: var(--spacing-sm);
+}
+
+#searchPill {
+    position: relative;
+    margin-left: var(--spacing-md);
+}
+
+#searchPill input {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-pill);
+    border: 1px solid var(--color-cloud);
+    background-color: var(--color-evening);
+    color: var(--color-white-text);
+    width: 200px;
+    transition: width var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+#searchPill input:focus {
+    outline: none;
+    width: 220px;
+    box-shadow: 0 0 0 2px var(--color-electric-purple);
+}
+
+/* Sections */
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: var(--section-spacing);
+}
+
+#home, #about, #portfolio {
+    min-height: 66vh;
+    height: auto;
+}
+
+#home {
+    background-image: url('https://global-files-nginx.builderall.com/2b6c8c37-e28d-4058-897a-464fad7bc3ba/6d7a64a12567849ee7cf2a51401c4cb135bb8b264fe167fedb6600eb7de6c12a.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Carousel */
+#carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 2rem 0;
+}
+
+[data-carousel-slide] {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+[data-carousel-item] {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+[data-carousel-item] img {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+[data-carousel-button] {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#carouselPrev {
+    left: 10px;
+}
+
+#carouselNext {
+    right: 10px;
+}
+
+/* Form Styling */
+[data-form-group] {
+    margin-bottom: 1rem;
+}
+
+[data-form-control] {
+    width: 100%;
+    padding: var(--spacing-xs);
+    border-radius: var(--border-radius-sm);
+    border: none;
+    background-color: var(--color-evening);
+    color: var(--color-white-text);
+}
+
+[data-cta-button] {
+    padding: var(--spacing-xs) var(--spacing-md);
+    background-color: var(--color-secondary);
+    color: var(--color-dark-bg);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+[data-cta-button]:hover {
+    background-color: var(--color-bright-orange);
+}
+
+/* Footer Styling */
+#footerFixed {
+    background-color: var(--color-dark-bg);
+    padding: 1rem 0;
+}
+
+[data-footer-content] {
+    text-align: center;
+}
+
+[data-footer-content] a {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+[data-footer-content] a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #navMenu {
+        display: none;
+    }
+    
+    #navToggle {
+        display: flex;
+    }
+    
+    #navMenu[data-open] {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--color-dark-bg);
+        padding: var(--spacing-md);
+    }
+    
+    #navMenu[data-open] li {
+        margin: var(--spacing-xs) 0;
+    }
+}
+
+/* Contact Form Styling Enhancements */
+#contactForm {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 2px solid #eeb64f;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 20px rgba(238, 182, 79, 0.3);
+    padding: 2rem;
+}
+
+#contactForm [data-form-group] {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+#contactForm label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-white-text);
+}
+
+#contactForm [data-form-control] {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(25, 34, 49, 0.7);
+    color: var(--color-white-text);
+    font-size: 1rem;
+}
+
+#contactForm [data-form-control]:focus {
+    outline: none;
+    border-color: #eeb64f;
+    box-shadow: 0 0 0 2px rgba(238, 182, 79, 0.25);
+}
+
+#contactForm [data-cta-button] {
+    padding: 0.8rem 1.5rem;
+    background-color: #eeb64f;
+    color: var(--color-dark-bg);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+#contactForm [data-cta-button]:hover {
+    background-color: #f5c158;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+[data-privacy-note] {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+[data-lock-icon] {
+    margin-right: 0.5rem;
+}
+
+/* Search Functionality Styles */
+#searchResults {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--color-evening);
+    border: 1px solid var(--color-cloud);
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-sm);
+    z-index: 1000;
+    max-height: 300px;
+    overflow-y: auto;
+    width: 250px;
+    margin-top: var(--spacing-xs);
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+[data-search-section] {
+    font-weight: bold;
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px solid var(--color-cloud);
+    margin-bottom: var(--spacing-xs);
+    text-align: left;
+}
+
+[data-search-item] {
+    padding: var(--spacing-xs);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+    border-radius: var(--border-radius-sm);
+    margin: 2px 0;
+    text-align: left;
+}
+
+[data-search-item]:hover {
+    background-color: var(--color-stormy);
+}
+
+/* [data-search-highlight] {
+    box-shadow: 0 0 10px var(--color-electric-purple);
+} */
+
+[data-search-no-results] {
+    padding: var(--spacing-xs);
+    color: var(--color-cloud);
+    font-style: italic;
+    text-align: center;
+}
